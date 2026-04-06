@@ -262,3 +262,8 @@ body {
     border-radius: 12px;
     display: block;
 }
+
+.footer {
+    margin-bottom: 0.5rem;
+    text-align: center;  
+}
