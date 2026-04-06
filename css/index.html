@@ -1,0 +1,261 @@
+html {
+    /* Base deep red color */
+    background-color: #1B5E20;
+
+    /* High-noise fuzzy felt texture using multiple radial gradients */
+    background-image:
+        radial-gradient(rgba(255,255,255,0.05) 0.5px, transparent 1px),
+        radial-gradient(rgba(0,0,0,0.05) 0.5px, transparent 1px),
+        radial-gradient(rgba(200,255,200,0.04) 0.5px, transparent 1px),
+        radial-gradient(rgba(0,90,0,0.04) 0.5px, transparent 1px),
+        radial-gradient(rgba(220,255,220,0.03) 0.5px, transparent 1px),
+        radial-gradient(rgba(0,70,0,0.03) 0.5px, transparent 1px),
+        radial-gradient(rgba(180,255,180,0.02) 0.5px, transparent 1px),
+        radial-gradient(rgba(0,50,0,0.02) 0.5px, transparent 1px),
+        radial-gradient(rgba(210,255,210,0.015) 0.5px, transparent 1px),
+        radial-gradient(rgba(0,40,0,0.015) 0.5px, transparent 1px);
+
+    /* Small sizes to make the noise dense */
+    background-size: 2px 2px, 3px 3px, 4px 4px, 5px 5px, 6px 6px, 7px 7px, 8px 8px, 9px 9px, 10px 10px, 12px 12px;
+
+    /* Slight offsets to break patterns */
+    background-position: 0 0, 1px 2px, 2px 3px, 3px 1px, 4px 5px, 5px 2px, 6px 6px, 7px 4px, 8px 9px, 10px 6px;
+
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.content {
+    width: 80%;
+    margin: 20px auto 0 auto;   /* 20px margin above content so it's below menu */
+    background-color: rgba(120, 150, 120, 0.25); 
+    padding: 40px 60px;         
+    box-sizing: border-box;
+    border-radius: 20px;                
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    color: #f0f0f0;
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+        padding: 30px 20px; /* optional: reduce padding on small screens */
+    }
+}
+
+.content h1,
+.content h2,
+.content h3 {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.content p {
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.content hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    margin: 2em 0;
+}
+
+/* Make iframes fully responsive */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.location-map {
+    max-width: 600px;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin: 0 auto;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Hotel grid: max 3 columns */
+.hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* max 3 columns */
+    gap: 20px;
+}
+
+/* Stack for smaller screens */
+@media (max-width: 1024px) {
+    .hotels-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .hotels-grid {
+        grid-template-columns: 1fr; /* 1 column on phones */
+    }
+}
+
+.menu {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgba(0,0,0,0.3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+}
+
+.menu-items a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+/* Toggle button hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+  .menu {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-items a {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .menu-items.show {
+    display: flex;
+  }
+}
+
+.button-container {
+    text-align: center; /* centers the button */
+    margin: 20px 0;     /* spacing above and below */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4B5320; /* deep red to match theme */
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #6B8E23; /* slightly brighter red on hover */
+    transform: scale(1.05);     /* subtle pop effect */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+.image-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; /* centers the container */
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center; /* ensures inline-block children are centered */
+}
+
+.image-container img {
+    display: inline-block; /* center within text-align */
+    max-width: 100%;
+    height: auto;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 per row on mobile */
+    }
+}
+
+.image-grid .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
