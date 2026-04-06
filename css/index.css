@@ -196,8 +196,8 @@ body {
 
 .cta-button {
     display: inline-block;
-    background-color: #4B5320; /* deep red to match theme */
-    color: #fff;
+    background-color: #D2B48C; /* Scout uniform tan */
+    color: #1B3A1B; /* dark green for contrast */ 
     font-family: "Segoe UI", sans-serif;
     font-size: 1.1rem;
     font-weight: bold;
@@ -208,7 +208,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #6B8E23; /* slightly brighter red on hover */
+    background-color: #BFA074; /* darker tan */
     transform: scale(1.05);     /* subtle pop effect */
 }
 
