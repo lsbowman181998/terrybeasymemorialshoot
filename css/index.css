@@ -205,11 +205,14 @@ body {
     border-radius: 12px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 0 2px rgba(0,0,0,0.8);
 }
 
 .cta-button:hover {
     background-color: #8B7355; /* darker tan */
     transform: scale(1.05);     /* subtle pop effect */
+    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
 }
 
 /* Responsive for mobile */
