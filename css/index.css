@@ -1,3 +1,7 @@
+/* Site designed and developed by Cosmic Trail Creative, LLC */
+/* All rights reserved. No part of this website can be copied, reproduced, or used without the express consent of the owner. */
+/* Project: Terry Beasy Memorial Shoot | Internal Ref: CTC-0426-TBMS */
+
 html {
     /* Base deep red color */
     background-color: #1B5E20;
@@ -27,6 +31,8 @@ html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+
+    user-select: none;
 }
 
 body {
